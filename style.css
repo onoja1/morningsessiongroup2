@@ -1,0 +1,23 @@
+.head{color: blue;
+text-align: center;}
+
+.menu{background-color: chartreuse;
+font-size: 30px;
+text-align: center;}
+
+.menu ul{list-style: none;}
+
+.menu li{display: inline-block;
+padding: 15px;}
+
+.menu a{text-decoration: none;
+color: rgb(35, 71, 233);}
+
+
+
+
+
+
+
+
+

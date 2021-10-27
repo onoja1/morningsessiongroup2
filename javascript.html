@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id ="head">group 1</h1>
+    <h3 id="food"></h3>
+
+    <h1 id = "life">Hello</h1>
+    <button onclick="red()">Red</button>
+    <button onclick="Green()">Green</button>
+    <button onclick="blue()">Blue</button>
+
+
+
+    <script>
+        document.write("Group 2 Morning session </br>")
+        document.write("obed </br>")
+        document.write("paulina </br>")
+        document.write("collins </br>")
+        document.write(60/3 + "<br>")                          
+        var firstnumber = 80
+        var secondnumber = 4 
+        var answer = firstnumber/secondnumber
+        document.write(answer + "<br>")
+        document.write(255%100 + "<br>")
+
+        document.getElementById("head").innerHTML = "group 2"
+
+        document.getElementById("food").innerHTML = "Rice"
+
+        var password = "1234"
+        var confirmpassword = 1234
+        document.write(password === confirmpassword);
+        document.write(password == confirmpassword);
+
+        var email = "david@gmail.com"
+        var confirmemail = "david@gmail.com "
+        document.write(email == confirmemail.trim());
+        document.write(email === confirmemail)
+
+        function subtractNumbers(firstnumber,secondnumber){ return firstnumber-secondnumber}
+
+        document.write(subtractNumbers (50,2))
+        
+        
+
+        function red(){
+            document.getElementById("life").innerHTML = "Red"
+            document.getElementById("life").style.color="Red"
+        
+        }
+        function Green(){
+            document.getElementById("life").innerHTML = "Green"
+            document.getElementById("life").style.color="Green"
+        }
+
+        function blue(){
+            document.getElementById("life").innerHTML = "blue"
+            document.getElementById("life").style.color="blue"
+        }
+        
+    </script>
+
+</body>
+</html>

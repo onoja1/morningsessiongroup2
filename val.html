@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(JOHN.jpg);">
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="content.html"> About</a> </li>
+            <li><a href="javascript2.html">Contact</a></li>
+            <li><a href="javascript.html">Register</a></li>
+        </ul>
+    </div>
+
+    <div container style="color: aliceblue; text-align: center;">
+        <h1>Register</h1>
+        <p id="message"></p> <br> <br>
+        <input type="text" placeholder="enter fullname" id="fullname" style="width: 600px; background-color: white;"> <br> <br>
+        <input type="email" placeholder="enter email" id="email" style="width: 600px; background-color: whitesmoke;"> <br> <br>
+        <input type="number" placeholder="enter phone number" id="phonenumber" style="width: 600px; background-color: whitesmoke;"> <br> <br>
+        <input type="password" placeholder="password" id="password"  style="width: 600px; background-color: whitesmoke;"> <br> <br>
+        <input type="password" placeholder="confirmpassword" id="confirmpassword"  style="width: 600px; background-color: whitesmoke;"> <br> <br>
+        <button onclick="faith ()" style="background-color: brown;">Click To Submit</button> <br> <br>
+    </div>
+
+ <script>
+        function faith(){
+           var fullname = document.getElementById("fullname").value
+           var email = document.getElementById("email").value
+           var phonenumber = document.getElementById("phonenumber").value
+           var password = document.getElementById("password").value
+           var confirmpassword = document.getElementById("confirmpassword").value
+  
+            if(fullname === "" || email === "" || phonenumber === "" || password === "" || confirmpassword === ""){
+                document.getElementById("message").innerHTML = "This input is required"
+            }
+            else if(password != confirmpassword){
+                document.getElementById("message").innerHTML = "confirmpassword does not match password"
+            }
+            else if(password.length < 4 || confirmpassword.length < 4){
+                document.getElementById("message").innerHTML = "password must be more than 3 characters"
+            }
+            else if(password.length > 11 || confirmpassword.length > 11){
+                document.getElementById("message").innerHTML = "password must not be more than 11 characters"
+            }
+            else if(!fullname.match(/^[A-Za-z ]+$/)){
+              document.getElementById("message").innerHTML = "enter a valid name"
+            }
+            else if(!email.match(/\S+@\S+\.\S+/)){
+         document.getElementById("message").innerHTML = "enter a valid email"
+            }
+            else{
+                document.getElementById("message").innerHTML = "Registration successful"
+                window.location.href = "dashboard.html"
+            }
+  
+        }
+ </script>
+</body>
+</html>
