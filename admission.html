@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Adission Status</h1>
+    <p id="message"></p>
+    <input type="number" placeholder="Enter Your Jamb Score" id="jambscore">
+    <button onclick="score()">Check</button>
+
+    <script>
+        function score(){
+            var cutoffmark = 180
+            var jambscore = document.getElementById("jambscore").value
+
+            if(jambscore >= cutoffmark && jambscore <= 400){
+                document.getElementById("message").innerHTML = "Admission granted"
+            }
+            else if(jambscore < cutoffmark && jambscore > 0){
+                document.getElementById("message").innerHTML = "Admission denied"
+            }
+            else if(jambscore == "0"){
+                document.getElementById("message").innerHTML = "Enter a valid jamb score"
+            }
+            else if(jambscore > 400){
+                document.getElementById("message").innerHTML = "Jamb score required"
+            }else{
+                document.getElementById("message").innerHTML = "error"
+            }
+
+
+        }
+    </script>
+</body>
+</html>

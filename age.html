@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Age Validation App</h1>
+
+    <p id="message"></p>
+    <input type="number" placeholder="|Enter Age" id="achildage">
+    <input type="number" placeholder="Enter Age" id="ateenagerage">
+    <input type="number" placeholder="Enter Age" id="anadultage">
+
+    <button onclick="life()">Submit</button>
+
+    <script>
+        function life(){
+            var childage = document.getElementById("achildage").value
+            var teenagerage = document.getElementById("ateenagerage").value
+            var anadultage = document.getElementById("anadultage").value
+            
+            if(childage === "" || teenagerage === "" || adultage === ""){
+                document.getElementById("message").innerHTML = "Age Is Required"
+            }
+            else if(childage >= 1 || childage >= 17){
+                document.getElementById("message").innerHTML = "Successful"
+            }
+            else if(teenagerage >= 18 || teenagerage >= 29){
+                document.getElementById("message").innerHTML = "Successful"
+            }
+            else if(adultage >= 30 || adultage >= 79){
+                document.getElementById("message").innerHTML = "Successful"
+            }
+            else if(age > 79){
+                document.getElementById("message").innerHTML = "Age Not Valid"
+            }
+            else{
+                document.getElementById("message").innerHTML = "Enter a valid age"
+
+            }
+
+            
+        }
+    </script>
+</body>
+</html>

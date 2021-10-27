@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="displaydate()" id="dead">
+    <h1 id="date"></h1>
+    <input type="text">
+    <button onclick="red()">Red</button>
+    <button onclick="Green()">Green</button>
+    <button onclick="blue()">Blue</button>
+
+    <input type="text" placeholder="Enter desired color name" id="backgroundColor">
+    <button onclick="hope()">Enter</button>
+
+    <script>
+        function daterefresh(){
+            var number = 1000
+            var timeout = setTimeout("displaydate()", number)
+        }
+
+        function displaydate(){
+            var time = new Date()
+        document.getElementById("date").innerHTML = time
+        daterefresh()
+        }
+        
+        function red(){
+            document.getElementById("dead").style.backgroundColor="red"
+        
+        }
+        function Green(){
+            document.getElementById("dead").style.backgroundColor="Green"
+        }
+
+        function blue(){
+            document.getElementById("dead").style.backgroundColor="blue"
+        }
+        function hope(){
+            var backgroundColor = document.getElementById("backgroundColor").value
+            document.getElementById("dead").style.backgroundColor = backgroundColor
+        }
+
+
+        
+    </script>
+</body>
+</html>

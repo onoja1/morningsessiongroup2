@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Have you written Jamb?</p>
+        <select name="" id="jambstatus" onchange="showorhide()">
+            <option value=""></option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div id="jambscore">
+        <p>What was your score? </p>
+        <input type="number">
+    </div>
+
+    <script>
+        document.getElementById("jambscore").style.visibility = "hidden"
+        function showorhide(){
+            var jambstatus = document.getElementById("jambstatus").value
+            if(jambstatus==="Yes"){
+            document.getElementById("jambscore").style.visibility = "visible"   
+            }
+            else{
+            document.getElementById("jambscore").style.visibility = "hidden"
+            }
+        }
+    </script>
+</body>
+</html>
